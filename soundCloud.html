@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+
+    <link rel="stylesheet" href="animate.css">
+    <link rel="stylesheet" href="soundCloud.css" />
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body id="body">
+    <h1 class="sr-only">sound cloud api</h1>
+    <div class="container">
+        <div class="search-results">
+            <form>
+                <input class="search" type="text" placeholder="Search" />
+                <button class="go" onclick="search();return false;">Go</button>
+            </form>
+            <ul class="results"></ul>
+            <div class="nav-btn">
+                <button aria-label="next" class="next" onclick="loadNext()">&#8680;</button>
+            </div>
+        </div>
+        <div class="img-container">
+            <img class="track-img" onclick="playTrack(' + index + ')" src="images/no_image.gif">
+            <div class="iframe"></div>
+        </div>
+        <div class="recent-searches">
+            <h2>Recent Searches</h2>
+            <ul class="recent"></ul>
+        </div>
+    </div>
+    <div id="player">
+    </div>
+    <script src="https://connect.soundcloud.com/sdk/sdk-3.0.0.js"></script>
+    <script src="soundCloud.js"></script>
+</body>
+</html>
